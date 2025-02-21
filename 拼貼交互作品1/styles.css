@@ -1,0 +1,53 @@
+/* 保持原有排版 */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+img {
+    width: 300px; /* 保持圖片大小 */
+    margin: 10px;
+    border: 2px solid #333;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1); /* 滑鼠懸停時放大 */
+    border-color: red;
+}
+
+/* 第一張圖片的模糊效果 */
+.blur {
+    filter: blur(10px); /* 模糊程度 */
+    transition: filter 0.3s ease-in-out; /* 平滑變化 */
+}
+
+/* 第四張圖片的抖動效果 */
+.shake {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+/* 抖動動畫 */
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(2px, -2px); }
+    50% { transform: translate(-2px, 2px); }
+    75% { transform: translate(2px, -2px); }
+    100% { transform: translate(0, 0); }
+}body {
+    background: linear-gradient(135deg, #b3e5fc, #a7ffeb, #81d4fa, #d1c4e9, #e1f5fe);
+    background-size: 400% 400%;
+    animation: dreamyBackground 12s ease infinite;
+}
+
+/* 讓背景顏色流動變化 */
+@keyframes dreamyBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
